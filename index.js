@@ -1,9 +1,46 @@
-let divisa = prompt("¿Qué moneda desea cambiar? (EURO, DOLAR, LIBRA, REAL)");
+const divisas = [
+    {id: 1, nombre: "dolar", precio: 280},
+    {id: 2, nombre: "euro", precio: 300},
+    {id: 3, nombre: "real", precio: 60},
+    {id: 4, nombre: "libra", precio: 320}
+]
 
-/* while (divisa!== "dolar" || "euro" || "libra" || "real"){
+for(const item of divisas){
+    let monedaACambiar = prompt("que moneda desea cambiar?");
+    if(monedaACambiar=== item.nombre){
+        let cantidad = parseInt(prompt("cuanto desea cambiar?"));
+        let precioFinal = cantidad * item.precio;
+        alert(precioFinal)
+    }else if(cantidad >= 100){
+        let precioFinal = (cantidad * 0.95) * item.precio ;
+        alert(precioFinal)
+    }else if (cantidad >= 500){
+        let precioFinal = (cantidad * 0.90) * item.precio;
+        alert(precioFinal)
+    }
+    break;
+}
+
+/* const mediosDePago = [
+    {id: 1, nombre: "transferencia", recargo: 0},
+    {id: 2, nombre: "efectivo", recargo: 0},
+    {id: 3, nombre: "tarjeta", recargo: 500}
+]
+
+for (const item of mediosDePago){
+    let medioDePago = prompt("Como desea pagar? (TRANSFERENCIA, EFECTIVO, TARJETA)")
+    if (medioDePago === item.nombre) {
+        alert(`"Usted tendra un recargo de" ${item.recargo}`)
+    }
+    break;
+} */
+
+/* let divisa = prompt("¿Qué moneda desea cambiar? (EURO, DOLAR, LIBRA, REAL)");
+
+while (divisa!== "dolar" || "euro" || "libra" || "real"){
     alert("MONEDA NO ENCONTRADA");
     divisa = prompt("¿Qué moneda desea cambiar? (EURO, DOLAR, LIBRA, REAL)");
-} */
+}
 
 if (divisa == "dolar"){
     alert("USTED VA A COMPRAR DOLARES");
@@ -64,4 +101,4 @@ if (formaDePago.toLowerCase = "credito"){
 }else if(formaDePago.toLowerCase = "transferencia"){
     alert("Usted no tendrá recargo.");
 }
-alert(mensajeGracias);
+alert(mensajeGracias); */
